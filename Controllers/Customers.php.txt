@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Controllers;
+
+class Customers extends BaseController
+{
+    public function index()
+    {
+        $data['customers'] = [
+            ['full_name' => 'Juan Dela Cruz', 'email' => 'juan@gmail.com', 'phone' => '09171234567'],
+            ['full_name' => 'Maria Santos', 'email' => 'maria@gmail.com', 'phone' => '09182345678'],
+            ['full_name' => 'Pedro Reyes', 'email' => 'pedro@gmail.com', 'phone' => '09193456789'],
+            ['full_name' => 'Ana Lim', 'email' => 'ana@gmail.com', 'phone' => '09204567890'],
+            ['full_name' => 'Jose Rizal', 'email' => 'jose@gmail.com', 'phone' => '09215678901'],
+        ];
+
+        return view('templates/header') . view('customers/index', $data);
+    }
+}
